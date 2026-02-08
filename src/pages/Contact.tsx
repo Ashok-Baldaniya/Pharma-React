@@ -19,7 +19,9 @@ const Contact = () => {
   })
   const [errors, setErrors] = useState<Record<string, string>>({})
 
-  const handleChange = (field: keyof typeof form) => (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange =
+    (field: keyof typeof form) =>
+    (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setForm((prev) => ({ ...prev, [field]: event.target.value }))
   }
 
